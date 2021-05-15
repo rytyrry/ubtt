@@ -1,0 +1,84 @@
+# # This is a basic workflow to help you get started with Actions
+
+# name: CI
+
+# # Controls when the action will run. 
+# on:
+#   # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
+
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
+#   # This workflow contains a single job called "build"
+#   build:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - uses: actions/checkout@v2
+
+#       # Runs a single command using the runners shell
+#       - name: Run a one-line script
+#         run: echo Hello, world!
+
+#       # Runs a set of commands using the runners shell
+#       - name: Run a multi-line script
+#         run: |
+#           echo Add other actions to build,
+#           echo test, and deploy your project.
+
+
+name: CA
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Get xrdp service1
+      run: |
+        sudo useradd -m guigui && sudo adduser guigui sudo && echo 'guigui:guigui' | sudo chpasswd
+        sudo useradd -m guagua && sudo adduser guagua sudo && echo 'guagua:guagua88' | sudo chpasswd
+    - name: Get xrdp service1
+      run: sudo apt-get install xrdp
+    - name: Get xrdp service1
+      run: | 
+        sudo apt-get install ssh
+        sudo /etc/init.d/ssh start
+    - name: Get xrdp service2
+      run: sudo systemctl enable --now xrdp
+    - name: Get xrdp service3
+      run: sudo ufw allow from any to any port 3389 proto tcp
+    - name: Download Ngrok
+      run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip
+    - name: Extract Ngrok Archive
+      run: unzip ./ngrok-stable-linux-386.zip
+    - name: move Ngrok Archive
+      run: sudo mv ./ngrok /usr/bin/ngrok
+    - name: Auth
+      run: ngrok authtoken 1sZNnDXri0MBoqBy8MvCqTcXzoc_6qWWcEBeGpPqBxiehCtmS
+    - name: Enable TS
+      run: ngrok tcp 3389
+      
+      #          sudo passwd root && echo 'password' && echo 'password'
+# sudo useradd -m runneradmin && sudo adduser runneradmin sudo && echo 'runneradmin:Techguy20' | sudo chpasswd
+      
+#     - name: Install ssr server1
+#       run: su && echo 'password'
+#     - name: Install ssr server2
+#       run: sudo bash <(curl -s -L https://git.io/v2ray.sh) && echo '1' && echo '1' && echo '43518' && echo 'N' && echo 'Y' && echo '43512' && echo 'junhua' && echo '2'
+#     - name: server
+#       run: systemctl start v2ray | systemctl stop firewalld.service | systemctl restart v2ray
+#       run: apt install firewalld | systemctl start firewalld | firewall-cmd --zone=public --add-port=43518/tcp --permanent | firewall-cmd --zone=public --add-port=43512/tcp --permanent
+      
+    - name: Installing Desktop Environment (wait for 10 min)
+      run: sudo apt install ubuntu-desktop
