@@ -67,7 +67,7 @@ jobs:
     - name: Auth
       run: ngrok authtoken 1sZNnDXri0MBoqBy8MvCqTcXzoc_6qWWcEBeGpPqBxiehCtmS
     - name: Installing Desktop Environment (wait for 10 min)
-      run: sudo apt-get install ubuntu-desktop
+      run: sudo apt update && sudo apt install ubuntu-desktop
     - name: Enable TS
       run: ngrok tcp 3389
       
