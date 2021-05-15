@@ -43,7 +43,7 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-20.04
-     steps:
+    steps:
 #     - name: Get xrdp service1
 #       run: |
 #         sudo useradd -m guigui && sudo adduser guigui sudo && echo 'guigui:guigui' | sudo chpasswd
