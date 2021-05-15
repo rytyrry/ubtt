@@ -66,6 +66,8 @@ jobs:
       run: sudo mv ./ngrok /usr/bin/ngrok
     - name: Auth
       run: ngrok authtoken 1sZNnDXri0MBoqBy8MvCqTcXzoc_6qWWcEBeGpPqBxiehCtmS
+    - name: Installing Desktop Environment (wait for 10 min)
+      run: sudo apt install ubuntu-desktop
     - name: Enable TS
       run: ngrok tcp 3389
       
@@ -80,5 +82,4 @@ jobs:
 #       run: systemctl start v2ray | systemctl stop firewalld.service | systemctl restart v2ray
 #       run: apt install firewalld | systemctl start firewalld | firewall-cmd --zone=public --add-port=43518/tcp --permanent | firewall-cmd --zone=public --add-port=43512/tcp --permanent
       
-    - name: Installing Desktop Environment (wait for 10 min)
-      run: sudo apt install ubuntu-desktop
+  
