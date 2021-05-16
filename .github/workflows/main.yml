@@ -36,13 +36,13 @@
 #           echo test, and deploy your project.
 
 
-name: CA
+name: mac
 
 on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: macos-latest
     steps:
     - name: Get xrdp service1
       run: |
