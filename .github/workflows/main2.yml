@@ -14,7 +14,7 @@ jobs:
       - name: Extract Ngrok Archive
         run: unzip ./ngrok-stable-darwin-arm64.zip
       - name: move Ngrok Archive
-        run: sudo mv ./ngrok /usr/bin/ngrok
+        run: sudo mv ./ngrok /usr/local/bin/ngrok
       - name: Auth
         run: ngrok authtoken 1sZNnDXri0MBoqBy8MvCqTcXzoc_6qWWcEBeGpPqBxiehCtmS
       - name: Enable TS
