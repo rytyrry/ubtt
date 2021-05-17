@@ -12,7 +12,7 @@ jobs:
       - name: Download Ngrok
         run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
       - name: Extract Ngrok Archive
-        run: unzip ./ngrok-stable-darwin-arm64.zip
+        run: unzip ./ngrok-stable-darwin-amd64.zip
       - name: move Ngrok Archive
         run: sudo mv ./ngrok /usr/local/bin/ngrok
       - name: Auth
