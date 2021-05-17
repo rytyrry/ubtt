@@ -10,7 +10,7 @@ jobs:
 #       -name: user
 #         run: dscl . -create /User/USERNAME_HERE
       - name: Download Ngrok
-        run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-arm64.zip
+        run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
       - name: Extract Ngrok Archive
         run: unzip ./ngrok-stable-darwin-arm64.zip
       - name: move Ngrok Archive
