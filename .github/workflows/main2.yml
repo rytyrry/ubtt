@@ -7,15 +7,8 @@ jobs:
     runs-on: macos-latest
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Install k6 by homebrew
-        run: brew install k6
-
-      - name: Local k6 test
-        run: k6 run basic/script.js
-        
+#       -name: user
+#         run: dscl . -create /User/USERNAME_HERE
       - name: Download Ngrok
         run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-arm64.zip
       - name: Extract Ngrok Archive
@@ -27,6 +20,15 @@ jobs:
       - name: Enable TS
         run: ngrok tcp 3389
     
+    
+#       - name: Checkout
+#         uses: actions/checkout@v1
+
+#       - name: Install k6 by homebrew
+#         run: brew install k6
+
+#       - name: Local k6 test
+#         run: k6 run basic/script.js
 #     steps:
 #     - name: Get xrdp service1
 #       run: |
