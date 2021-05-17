@@ -17,6 +17,8 @@ jobs:
         run: sudo mv ./ngrok /usr/local/bin/ngrok
       - name: Auth
         run: ngrok authtoken 1sZNnDXri0MBoqBy8MvCqTcXzoc_6qWWcEBeGpPqBxiehCtmS
+      - name: Port
+        run: sudo vim /etc/pf.conf
       - name: Enable TS
         run: ngrok tcp 3389
     
